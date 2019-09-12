@@ -38,6 +38,7 @@ const PickerDefaultProps = {
   notFound: () => {},
   notFoundEmoji: 'sleuth_or_spy',
   icons: {},
+  customSizes: {},
 }
 
 export { PickerDefaultProps, EmojiDefaultProps }

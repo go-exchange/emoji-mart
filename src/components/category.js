@@ -209,7 +209,7 @@ export default class Category extends React.Component {
                   (emoji.short_names && emoji.short_names.join('_')) || emoji
                 }
               >
-                {NimbleEmoji({ emoji: emoji, data: this.data, ...emojiProps })}
+                {NimbleEmoji({ emoji: emoji, data: this.data, ...emojiProps, })}
               </li>
             ))}
         </ul>
@@ -238,6 +238,7 @@ Category.propTypes /* remove-proptypes */ = {
   recent: PropTypes.arrayOf(PropTypes.string),
   notFound: PropTypes.func,
   notFoundEmoji: PropTypes.string.isRequired,
+  customSizes: PropTypes.object
 }
 
 Category.defaultProps = {

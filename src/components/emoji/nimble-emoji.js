@@ -163,8 +163,8 @@ const NimbleEmoji = (props) => {
       }
     } else {
       style = {
-        width: props.size,
-        height: props.size,
+        width: props.customSizes[props.type] || props.size,
+        height: props.customSizes[props.type] || props.size,
         display: 'inline-block',
         backgroundImage: `url(${props.backgroundImageFn(
           props.set,
