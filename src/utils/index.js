@@ -28,7 +28,7 @@ function sanitize(emoji) {
     colons = `:${id}:`
 
   if (custom) {
-    return emoji
+    return { ...emoji, colons }
   }
 
   if (skin_tone) {
@@ -88,6 +88,7 @@ function getData(emoji, skin, set, data) {
   if (!Object.keys(emojiData).length) {
     emojiData = emoji
     emojiData.custom = true
+    console.log(emoji)
 
     if (!emojiData.search) {
       emojiData.search = buildSearch(emoji)
