@@ -238,7 +238,6 @@ Category.propTypes /* remove-proptypes */ = {
   recent: PropTypes.arrayOf(PropTypes.string),
   notFound: PropTypes.func,
   notFoundEmoji: PropTypes.string.isRequired,
-  customSizes: PropTypes.object
 }
 
 Category.defaultProps = {
