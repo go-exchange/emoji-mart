@@ -608,7 +608,6 @@ export default class NimblePicker extends React.PureComponent {
                 skinEmoji: skinEmoji,
               }}
               i18n={this.i18n}
-              customSizes
             />
           </div>
         )}
