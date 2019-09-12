@@ -132,8 +132,8 @@ const NimbleEmoji = (props) => {
   } else if (custom) {
     className += ' emoji-mart-emoji-custom'
     style = {
-      width: props.size,
-      height: props.size,
+      width: props.customSizes[props.type] || props.size,
+      height: props.customSizes[props.type] || props.size,
       display: 'inline-block',
     }
     if (data.spriteUrl) {
@@ -163,8 +163,8 @@ const NimbleEmoji = (props) => {
       }
     } else {
       style = {
-        width: props.customSizes[props.type] || props.size,
-        height: props.customSizes[props.type] || props.size,
+        width: props.size,
+        height: props.size,
         display: 'inline-block',
         backgroundImage: `url(${props.backgroundImageFn(
           props.set,
