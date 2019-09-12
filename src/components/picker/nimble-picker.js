@@ -573,10 +573,10 @@ export default class NimblePicker extends React.PureComponent {
                   onOver: this.handleEmojiOver,
                   onLeave: this.handleEmojiLeave,
                   onClick: this.handleEmojiClick,
-                  customSizes,
                 }}
                 notFound={notFound}
                 notFoundEmoji={notFoundEmoji}
+                customSizes={customSizes}
               />
             )
           })}
@@ -600,7 +600,6 @@ export default class NimblePicker extends React.PureComponent {
                 sheetColumns: sheetColumns,
                 sheetRows: sheetRows,
                 backgroundImageFn: backgroundImageFn,
-                customSizes,
               }}
               skinsProps={{
                 skin: skin,
@@ -608,6 +607,7 @@ export default class NimblePicker extends React.PureComponent {
                 skinEmoji: skinEmoji,
               }}
               i18n={this.i18n}
+              customSizes={customSizes}
             />
           </div>
         )}

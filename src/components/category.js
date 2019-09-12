@@ -158,6 +158,7 @@ export default class Category extends React.Component {
         i18n,
         notFound,
         notFoundEmoji,
+        customSizes,
       } = this.props,
       emojis = this.getEmojis(),
       labelStyles = {},
@@ -209,7 +210,12 @@ export default class Category extends React.Component {
                   (emoji.short_names && emoji.short_names.join('_')) || emoji
                 }
               >
-                {NimbleEmoji({ emoji: emoji, data: this.data, ...emojiProps, })}
+                {NimbleEmoji({
+                  emoji: emoji,
+                  data: this.data,
+                  customSizes,
+                  ...emojiProps,
+                })}
               </li>
             ))}
         </ul>
