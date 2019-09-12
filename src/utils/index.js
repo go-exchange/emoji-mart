@@ -23,21 +23,12 @@ function sanitize(emoji) {
       emoticons,
       unified,
       custom,
-      imageUrl,
     } = emoji,
     id = emoji.id || short_names[0],
     colons = `:${id}:`
 
   if (custom) {
-    return {
-      id,
-      name,
-      short_names,
-      colons,
-      emoticons,
-      custom,
-      imageUrl,
-    }
+    return emoji
   }
 
   if (skin_tone) {
